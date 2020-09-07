@@ -1,0 +1,83 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+body > h1 {
+    margin-top: 70px;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 16px;
+    animation: blinker 1s linear infinite;
+}
+
+@keyframes blinker {  
+  50% { opacity: 0; }
+}
+
+#header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 500px;
+
+    position: relative;
+}
+
+#header span {
+    position: absolute;
+    top: 17px;
+    right: 0;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 13px;
+}
+
+#game {
+    width: 500px;
+    height: 200px;
+    border: 2px solid black;
+    background-color: whitesmoke;
+    overflow: hidden;
+}
+#character {
+    width: 50px;
+    height: 50px;
+    background-image: url(https://i.ibb.co/dLpcyyK/pokemon-pixel-art.png);
+    background-size: cover;
+    position: relative;
+    top: 150px;
+}
+
+.animateJump {
+    animation: jump 500ms;
+}
+@keyframes jump{
+    0%{top: 150px;}
+    30%{top: 100px;}
+    70%{top: 100px;}
+    100%{top: 150px;}
+}
+
+#block {
+    width: 20px;
+    height: 20px;
+    background-size: 120%; 
+    background-image: url(https://i.ibb.co/rvTfWNr/pixelrock.png);
+    position: relative;
+    top: 130px;
+    left: 480px;
+}
+
+.animateBlock {
+    animation: block 1s infinite linear;
+}
+@keyframes block{
+    0%{left:480px;}
+    100%{left:-40px;}
+}
